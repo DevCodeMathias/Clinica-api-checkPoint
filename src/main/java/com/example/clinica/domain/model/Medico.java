@@ -22,4 +22,7 @@ public class Medico {
 
     @OneToMany(mappedBy = "medico")
     private List<Consulta> consultas = new ArrayList<>();
+
+    @Enumerated(EnumType.STRING)
+    private Especialidades especialidade;
 }

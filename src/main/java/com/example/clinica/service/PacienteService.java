@@ -1,8 +1,11 @@
 package com.example.clinica.service;
 
 import com.example.clinica.Contracts.Request.PacienteCreateDto;
+import com.example.clinica.Contracts.Response.MedicoResponseDto;
 import com.example.clinica.Contracts.Response.PacienteResponseDto;
 import com.example.clinica.Interfaces.Service.IPacienteService;
+import com.example.clinica.domain.model.Especialidades;
+import com.example.clinica.domain.model.Medico;
 import com.example.clinica.domain.model.Paciente;
 import com.example.clinica.domain.model.vo.Cpf;
 import com.example.clinica.domain.model.vo.Email;
@@ -10,6 +13,8 @@ import com.example.clinica.repository.IPacienteRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service @RequiredArgsConstructor
 public class PacienteService implements IPacienteService {
@@ -42,4 +47,5 @@ public class PacienteService implements IPacienteService {
                 paciente.getEmail().getValue()
         );
     }
+
 }

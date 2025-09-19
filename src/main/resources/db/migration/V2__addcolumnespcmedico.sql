@@ -1,0 +1,2 @@
+ALTER TABLE medico
+ADD COLUMN especialidades VARCHAR(50) NOT NULL;

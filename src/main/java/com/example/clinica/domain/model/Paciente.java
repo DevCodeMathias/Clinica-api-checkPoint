@@ -25,6 +25,7 @@ public class Paciente {
     @Column(nullable = false)
     private String nome;
 
+
     @OneToMany(mappedBy = "paciente")
     private List<Consulta> consultas = new ArrayList<>();
 

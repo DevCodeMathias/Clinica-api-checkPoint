@@ -29,12 +29,4 @@ public class MedicoController {
     }
 
 
-    @Operation(summary = "Detalhar medico")
-    @ApiResponse(responseCode = "200")
-    @GetMapping("/{id}")
-    public ResponseEntity<PacienteResponseDto> criar(@Valid @PathVariable Long id) {
-        PacienteResponseDto pacient = service.pegarDetalhesMedicos(id);
-        return ResponseEntity.ok(pacient);
-    }
-
 }
